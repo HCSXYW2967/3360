@@ -78,51 +78,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&mkp LCLK>;
-        };
-
-        combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&mkp MCLK>;
-        };
-
-        combo_LSHFT {
-            timeout-ms = <50>;
-            key-positions = <38 39>;
-            bindings = <&mkp RCLK>;
-        };
-
-        combo_2 {
-            timeout-ms = <50>;
-            key-positions = <14 50>;
-            bindings = <&kp N2 >;
-        };
-
-        combo_3 {
-            timeout-ms = <50>;
-            key-positions = <26 50>;
-            bindings = <&kp N3>;
-        };
-
-        combo_GUI {
-            timeout-ms = <50>;
-            key-positions = <50 40>;
-            bindings = <&tog 1>;
-        };
-
-        combo_GU {
-            timeout-ms = <50>;
-            key-positions = <14 39>;
-            bindings = <&mo 2>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
