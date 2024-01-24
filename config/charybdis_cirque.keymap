@@ -42,9 +42,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =
-                <&kp ESC>,
-                <&kp TAB>;
+            bindings = <&kp ESC>, <&kp TAB>;
         };
     };
 
@@ -56,17 +54,14 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         modcp: mod_copy {
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_COPY";
             #binding-cells = <0>;
-            bindings =
-                <&as LS(C) C>,
-                <&kp C>;
+            bindings = <&as LS(C) C>, <&kp C>;
 
             mods = <(LGUI | RGUI)>;
         };
@@ -135,12 +130,12 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&lt 1 ESC  &kp N1  &kp N2     &kp N3    &kp N4     &kp N5     &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &lt 1 MINUS
-&lt 2 TAB  &kp Q   &kp W      &kp E     &kp R      &kp T      &kp Y   &kp U    &kp I      &kp O     &kp P     &lt 2 EQUAL
-&kp LSHFT  &kp A   &kp S      &kp D     &kp F      &kp G      &kp H   &kp J    &kp K      &kp L     &kp SEMI  &lt 3 SQT
-&kp CAPS   &kp Z   &kp X      &kp C     &kp V      &kp B      &kp N   &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH
-                   &kp GRAVE  &kp LGUI  &kp BSPC   &kp SPACE  &none   &kp RET  &kp LBKT   &kp RBKT
-                   &kp LALT   &kp LALT  &kp LCTRL  &kp DEL    &none   &none    &none      &none
+&kp ESC    &kp N1  &kp N2     &kp N3         &kp N4         &kp N5       &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &lt 1 MINUS
+&lt 2 TAB  &kp Q   &kp W      &kp E          &kp R          &kp T        &kp Y   &kp U    &kp I      &kp O     &kp P     &lt 2 EQUAL
+&kp CLCK   &kp A   &kp S      &kp D          &kp F          &kp G        &kp H   &kp J    &kp K      &kp L     &kp SEMI  &lt 3 SQT
+&kp LSHFT  &kp Z   &kp X      &kp C          &kp V          &kp B        &kp N   &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp BSLH
+                   &kp LCTRL  &kp LALT       &kp SPACE      &lt 1 SPACE  &none   &kp RET  &kp LBKT   &kp RBKT
+                   &kp LMETA  &kp BACKSPACE  &kp BACKSPACE  &kp DEL      &none   &none    &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
@@ -190,6 +185,17 @@
 
             trackball-bindings = <&tmv_x>;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
