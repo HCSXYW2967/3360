@@ -82,7 +82,7 @@
         compatible = "zmk,combos";
 
         yinliang {
-            bindings = <&kp C_VOL_DN>;
+            bindings = <&kp C_VOL_UP>;
             key-positions = <48 49>;
         };
 
